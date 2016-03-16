@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QGraphicsScene>
 
+#include <opencv2/imgproc/imgproc.hpp>
+
 namespace Ui {
 class MainWindow;
 }
@@ -25,6 +27,8 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
     QGraphicsPixmapItem *pixmapItem;
+
+    void addNextPicture(const cv::Mat &mat);
 };
 
 #endif // MAINWINDOW_H
